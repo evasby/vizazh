@@ -160,6 +160,9 @@ textarea:focus {
 
 .mycontent {
   border-top: 1px solid #bbbbbb;
+  padding: 20px 0px 0px 0px;
+}
+.mycontent__pa {
   position: absolute;
   left: 0px;
   right: 0px;
@@ -167,7 +170,6 @@ textarea:focus {
   bottom: 78px;
   overflow: auto;
   z-index: 1;
-  padding: 20px 0px 0px 0px;
 }
 
 .mytitle {
@@ -177,20 +179,22 @@ textarea:focus {
 }
 
 .header {
+  height: 96px;
+  overflow: hidden;
+  padding: 21px 0px 0px 0px;
+}
+.header__pa {
   position: absolute;
   left: 0px;
   right: 0px;
   top: 0px;
   z-index: 2;
-  height: 104px;
-  overflow: hidden;
-  padding: 14px 0px 0px 0px;
 }
 .header_top {
   font-family: corinthia;
   width: 150px;
   height: 46px;
-  padding: 19px 80px 0px 0px;
+  padding: 8px 80px 4px 0px;
   margin: 0 auto;
   background: url("../image/kiss.png") top right no-repeat;
   font-size: 40px;
@@ -213,9 +217,11 @@ textarea:focus {
 * html .header_bottom {
   height: 1%;
 }
-.header_item {
+.header_left {
   float: left;
-  width: 33.33%;
+}
+.header_right {
+  float: right;
 }
 
 .social {
@@ -312,24 +318,11 @@ textarea:focus {
   padding: 11px 18px 0px 18px;
 }
 .mymenu_list {
-  font: 14px Verdana, Geneva, sans-serif;
-  text-align: justify;
-  line-height: 0;
-  font-size: 1px;
-  text-justify: newspaper;
-  zoom: 1;
-  text-align-last: justify;
-}
-.mymenu_list:after {
-  width: 100%;
-  height: 0px;
-  visibility: hidden;
-  overflow: hidden;
-  content: '';
-  display: inline-block;
+  text-align: center;
 }
 .mymenu_item {
   display: inline-block;
+  padding: 0px 27px 0px 27px;
   text-align: left;
   line-height: normal;
   font-size: 14px;
@@ -340,6 +333,7 @@ textarea:focus {
 .mymenu_link {
   color: #545454;
   font-size: 16px;
+  font-family: arial;
   text-transform: uppercase;
   text-decoration: none;
 }
@@ -355,6 +349,21 @@ textarea:focus {
 .mymenu_link:focus {
   color: #545454;
 }
+.mymenu_link__active {
+  color: #787878;
+}
+.mymenu_link__active:visited {
+  color: #787878;
+}
+.mymenu_link__active:hover {
+  color: #787878;
+}
+.mymenu_link__active:active {
+  color: #787878;
+}
+.mymenu_link__active:focus {
+  color: #787878;
+}
 
 .phone {
   padding: 7px 0px 0px 0px;
@@ -368,6 +377,8 @@ textarea:focus {
 .footer {
   background-color: #ffffff;
   height: 78px;
+}
+.footer__pa {
   position: absolute;
   left: 0px;
   right: 0px;
@@ -388,7 +399,7 @@ textarea:focus {
   position: absolute;
   left: 0px;
   right: 0px;
-  top: 128px;
+  top: 131px;
   bottom: 78px;
   overflow: hidden;
   z-index: 1;

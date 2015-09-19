@@ -1,11 +1,13 @@
 .footer{
 	background-color: #ffffff;
 	height: 78px;
-	position:absolute;
-	left:0px;
-	right:0px;
-	bottom:0px;
-	z-index:2;
+	&__pa{
+		position:absolute;
+		left:0px;
+		right:0px;
+		bottom:0px;
+		z-index:2;
+	}
 	&_text{
 		font-family: corinthia;
 		font-size: 35px;

@@ -1,17 +1,19 @@
 .header{
-	position:absolute;
-	left:0px;
-	right:0px;
-	top:0px;
-	z-index:2;
-	height: 104px;
+	height: 96px;
 	overflow: hidden;
-	padding: 14px 0px 0px 0px;
+	padding: 21px 0px 0px 0px;
+	&__pa{
+		position:absolute;
+		left:0px;
+		right:0px;
+		top:0px;
+		z-index:2;
+	}
 	&_top{
 		font-family: corinthia;
 		width: 150px;
 		height: 46px;
-		padding: 19px 80px 0px 0px;
+		padding: 8px 80px 4px 0px;
 		margin: 0 auto;
 		background: url('../image/kiss.png') top right no-repeat;
 		font-size: 40px;
@@ -20,8 +22,13 @@
 	&_bottom{
 		@include def-clearfix2();
 	}
-	&_item{
+	&_left{
 		float: left;
-		width: 33.33%;
+	}
+	&_right{
+		float: right;
+	}
+	&_center{
+
 	}
 }

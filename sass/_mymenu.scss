@@ -1,29 +1,11 @@
 .mymenu{
 	padding: 11px 18px 0px 18px;
 	&_list{
-		font: 14px Verdana, Geneva, sans-serif;
-		text-align: justify;
-		line-height: 0;
-		font-size: 1px;
-		@include old-ie{
-			text-justify: newspaper;
-			zoom:1;
-		}
-		text-align-last: justify;
-		&:after{
-			width: 100%;
-			height: 0px;
-			visibility: hidden;
-			overflow: hidden;
-			content: '';
-			display: inline-block;
-		}
+		text-align: center;
 	}
 	&_item{
-		//background: #E76D13;
-		//width: 98px;
-		//height: 98px;
 		display: inline-block;
+		padding: 0px 27px 0px 27px;
 		text-align: left;
 		line-height: normal;
 		font-size: 14px;
@@ -36,7 +18,11 @@
 	&_link{
 		@include link(#545454, #787878);
 		font-size: 16px;
+		font-family: arial;
 		text-transform: uppercase;
 		text-decoration: none;
+		&__active{
+			@include link(#787878, #787878);
+		}
 	}
 }

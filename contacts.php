@@ -23,37 +23,40 @@
 <body>
 	<div class="inner">
 
-		<header class="header">
+		<header class="header header__pa">
 			<div class="header_top">lovely make up</div>
 			<div class="header_bottom">
-				<div class="header_item">
+				<div class="header_right">
+					<div class="phone"><p>+37529 1160219</p></div>
+				</div>
+				<div class="header_left">
 					<div class="social">
 						<a href="#" class="social_item social_item__fb">Facebook</a>
 						<a href="#" class="social_item social_item__ig">Instagram</a>
 						<a href="#" class="social_item social_item__vk">Вконтакте</a>
 					</div>
 				</div>
-				<div class="header_item">
+				<div class="header_center">
 					<nav class="mymenu">
 						<ul class="mymenu_list">
 							<li class="mymenu_item">
-								<a href="#" class="mymenu_link">Портфолио</a>
+								<a href="/layout/" class="mymenu_link">Главная</a>
 							</li>
 							<li class="mymenu_item">
-								<a href="#" class="mymenu_link">Тенденции</a>
+								<a href="/layout/portfolio.php" class="mymenu_link">Портфолио</a>
 							</li>
 							<li class="mymenu_item">
-								<a href="/contacts.php" class="mymenu_link">Контакты</a>
+								<a href="/layout/trends.php" class="mymenu_link">Тенденции</a>
+							</li>
+							<li class="mymenu_item">
+								<a href="/layout/contacts.php" class="mymenu_link mymenu_link__active">Контакты</a>
 							</li>
 						</ul>
 					</nav>
 				</div>
-				<div class="header_item">
-					<div class="phone"><p>+37529 1160219</p></div>
-				</div>
 			</div>
 		</header>
-		<div class="mycontent">
+		<div class="mycontent mycontent__pa">
 			<h1 class="mytitle">Контакты</h1>
 			<div class="contacts">
 				<div class="contacts_image"><img src="image/contacts/contact.jpg" alt=""></div>
@@ -76,7 +79,7 @@
 		</div>
 		
 
-		<footer class="footer">
+		<footer class="footer footer__pa">
 			<div class="footer_text">be beautiful</div>
 		</footer>
 
