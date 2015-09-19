@@ -1,0 +1,27 @@
+.header{
+	position:absolute;
+	left:0px;
+	right:0px;
+	top:0px;
+	z-index:2;
+	height: 104px;
+	overflow: hidden;
+	padding: 14px 0px 0px 0px;
+	&_top{
+		font-family: corinthia;
+		width: 150px;
+		height: 46px;
+		padding: 19px 80px 0px 0px;
+		margin: 0 auto;
+		background: url('../image/kiss.png') top right no-repeat;
+		font-size: 40px;
+		color: #f35e7c;
+	}
+	&_bottom{
+		@include def-clearfix2();
+	}
+	&_item{
+		float: left;
+		width: 33.33%;
+	}
+}

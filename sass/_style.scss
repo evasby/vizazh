@@ -2,14 +2,27 @@
 @import "fonts";
 //**********************************************************/
 //**********************************************************/
+//@include def-sticky-footer(65px, '.main', '.root-footer', '.footer');
+html, body{
+	height:100%;
+	overflow:hidden;
+}
 body{
   font-family: Arial, Helvetica, sans-serif;
-  color: #0c0c0c;
+  color: #636262;
   font-size: 14px;
+  position:absolute;
+  left:0px;
+  right:0px;
+  top:0px;
+  height:100%;
+  overflow:hidden;
 }
+
+        
 p{
   font-family: Arial, Helvetica, sans-serif;
-  color: #0c0c0c;
+  color: #636262;
   font-size: 14px;
 }
 a{
@@ -53,3 +66,25 @@ textarea{
 }
 //**********************************************************/
 //**********************************************************/
+@import "inner";
+@import "mycontent";
+@import "mytitle";
+@import "header";
+@import "social";
+@import "mymenu";
+@import "phone";
+@import "footer";
+@import "slider";
+@import "contacts";
+
+
+
+
+
+
+
+
+
+
+
+

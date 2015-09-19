@@ -1,0 +1,34 @@
+.contacts{
+	padding: 12px 0px 0px 0px;
+	&_image{
+		img{
+			display: block;
+			max-width: 280px;
+			height: auto;
+			@include def-border-radius(50%);
+			margin: 0px auto 35px auto;
+		}
+	}
+	&_text{
+		max-width: 660px;
+		margin: 0px auto 0px auto;
+		padding: 0px 0px 0px 0px;
+		p{
+			line-height: 1.5;
+			margin: 0px 0px 24px 0px;
+		}
+	}
+	&_phone{
+		text-align: center;
+		font-size: 24px;
+		color: #f35e7c;
+		margin: 0px 0px 15px 0px;
+	}
+	&_email{
+		text-align: center;
+		margin: 0px 0px 10px 0px;
+		a{
+			@include link(#636262, #636262);
+		}
+	}
+}

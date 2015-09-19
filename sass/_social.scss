@@ -1,0 +1,54 @@
+.social{
+	@include def-clearfix2();
+	&_title{
+		text-align: center;
+		margin: 0px 0px 10px 0px;
+	}
+	&_wrap{
+		@include def-clearfix2();
+		width: 90px;
+		margin: 0 auto;
+	}
+	&_item{
+		display: block;
+		margin: 0px 15px 0px 0px;
+		text-indent: 100%;
+		white-space: nowrap;
+		overflow: hidden;
+		width: 29px;
+		height: 29px;
+		float: left;
+		background: url('../image/social.png') 0px -29px no-repeat;
+		.social__contacts &{
+			margin: 0px 0px 0px 7px;
+			&:first-child{
+				margin: 0px;
+			}
+			width: 25px;
+			height: 25px;
+			background: url('../image/social2.png') 0px -25px no-repeat;
+		}		
+		@include def-transition(opacity, 0.2s);
+		&:hover{
+			@include def-opacity(0.8);
+		}
+		&__fb{
+			background-position: 0px 0px;
+			.social__contacts &{
+				background-position: 0px 0px;
+			}
+		}
+		&__ig{
+			background-position: -44px 0px;
+			.social__contacts &{
+				background-position: -32px 0px;
+			}
+		}
+		&__vk{
+			background-position: -85px 0px;
+			.social__contacts &{
+				background-position: -61px 0px;
+			}
+		}
+	}
+}

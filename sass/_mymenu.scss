@@ -1,0 +1,42 @@
+.mymenu{
+	padding: 11px 18px 0px 18px;
+	&_list{
+		font: 14px Verdana, Geneva, sans-serif;
+		text-align: justify;
+		line-height: 0;
+		font-size: 1px;
+		@include old-ie{
+			text-justify: newspaper;
+			zoom:1;
+		}
+		text-align-last: justify;
+		&:after{
+			width: 100%;
+			height: 0px;
+			visibility: hidden;
+			overflow: hidden;
+			content: '';
+			display: inline-block;
+		}
+	}
+	&_item{
+		//background: #E76D13;
+		//width: 98px;
+		//height: 98px;
+		display: inline-block;
+		text-align: left;
+		line-height: normal;
+		font-size: 14px;
+		vertical-align: top;
+		@include old-ie{
+			display : inline;
+			zoom : 1;
+		}
+	}
+	&_link{
+		@include link(#545454, #787878);
+		font-size: 16px;
+		text-transform: uppercase;
+		text-decoration: none;
+	}
+}

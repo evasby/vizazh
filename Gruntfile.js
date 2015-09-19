@@ -3,7 +3,6 @@ module.exports = function(grunt) {
     // 1. Вся настройка находится здесь
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
-
         /*concat: {
             // 2. Настройка для объединения файлов находится тут
             dist: {
@@ -14,42 +13,12 @@ module.exports = function(grunt) {
                 dest: 'js/build/production.js',
             }
         },*/
-        
         /*uglify: {
             build: {
                 src: 'js/build/production.js',
                 dest: 'js/build/production.min.js'
             }
-        },*/
-        
-        //imagemin: {
-            /*static: {                          // Target
-              options: {                       // Target options
-                optimizationLevel: 3,
-                svgoPlugins: [{ removeViewBox: false }],
-                use: [mozjpeg()]
-              },
-              files: {                         // Dictionary of files
-                'dist/img.png': 'src/img.png', // 'destination': 'source'
-                'dist/img.jpg': 'src/img.jpg',
-                'dist/img.gif': 'src/img.gif'
-              }
-            },*/
-            /*dynamic: {
-                options: {                       // Target options
-                    optimizationLevel: 3,
-                    svgoPlugins: [{ removeViewBox: false }],
-                    //use: [mozjpeg()]
-                  },
-                files: [{
-                    expand: true,
-                    cwd: 'image/new/baget',
-                    src: ['**//**.{png,jpg,gif}'],
-                    dest: 'image/new/baget-ready/'
-                }]
-            }
-        },*/
-        
+        },*/    
         sass: {
             dist: {
                 options: {
@@ -59,70 +28,138 @@ module.exports = function(grunt) {
                 files: {
                     'css/all.css': 'sass/all.scss',
                     'css/all-old-ie.css': 'sass/all-old-ie.scss',
-                    //'../slav-d/sites/all/themes/slav/css/all.css': 'sass/all.scss',
-                    //'../slav-d/sites/all/themes/slav/css/all-old-ie.css': 'sass/all-old-ie.scss',
-                    /*'C:/OpenServer/domains/alvista-d/sites/all/themes/alvista/css/all.css': 'sass/all.scss',
-                    'C:/OpenServer/domains/alvista-d/sites/all/themes/alvista/css/all-old-ie.css': 'sass/all-old-ie.scss'*/
                 }
             }
         },
-
-        ftp_upload: {
+        /*ftp_upload: {
             build: {
                 auth: {
-                    host: 'webformat.by',
+                    host: 'wfs.by',
                     port: 21,
                     authKey: 'key1'
                 },
-                //src: ['css/all.css', 'css/all-old-ie.css', 'css/all.css.map', 'css/all-old-ie.css.map'],
-                src: ['css/all.css', 'css/all-old-ie.css'],
-                //dest: 'www/slav.webformat.by/sites/all/themes/slav/css',
-                dest: 'www/ruf.webformat.by/sites/all/themes/rufsistems/css',
-                exclusions: ['css/**/.DS_Store', 'css/**/Thumbs.db', 'dist/tmp']
+                src: ['php/index.php', 'css/all.css', 'css/all-old-ie.css'],
+                dest: ['home/evasby/www/wfs.by/css'],
+                exclusions: ['.gitignore', '.ftppass']
             }
-        },
-        
-        /*compass: {                  // Task
-          dist: {                   // Target
-            options: {              // Target options
-              sassDir: 'sass',
-              cssDir: 'css'
-            }
-          }
         },*/
-        
+        ftp_push: {
+			    css: {
+                    options: {
+                        authKey: 'key1',
+                        host: 'wfs.by',
+                        dest: '/home/evasby/www/vizazh.wfs.by/layout',
+                        //dest: '/home/evasby/www/iphone.wfs.by/sites/all/themes/iphone',
+                        port: 21
+                    },
+                    files: [
+                        {
+                            expand: true,
+                            cwd: '.',
+                            src: [
+                                'css/all.css',
+                                'css/all-old-ie.css',
+                            ]
+                        }
+                    ]
+			    },
+                php: {
+                    options: {
+                        authKey: 'key1',
+                        host: 'wfs.by',
+                        dest: '/home/evasby/www/vizazh.wfs.by/layout',
+                        port: 21
+                    },
+                    files: [
+                        {
+                            expand: true,
+                            cwd: '.',
+                            src: [
+                                '*.php'
+                            ]
+                        }
+                    ]
+                },
+                js: {
+                    options: {
+                        authKey: 'key1',
+                        host: 'wfs.by',
+                        dest: '/home/evasby/www/vizazh.wfs.by/layout',
+                        port: 21
+                    },
+                    files: [
+                        {
+                            expand: true,
+                            cwd: '.',
+                            src: [
+                                'js/*.js'
+                            ]
+                        }
+                    ]
+                },
+                fonts: {
+                    options: {
+                        authKey: 'key1',
+                        host: 'wfs.by',
+                        dest: '/home/evasby/www/vizazh.wfs.by/layout',
+                        port: 21
+                    },
+                    files: [
+                        {
+                            expand: true,
+                            cwd: '.',
+                            src: [
+                                'fonts/*'
+                            ]
+                        }
+                    ]
+                },
+                dist: {
+                    options: {
+                        authKey: 'key1',
+                        host: 'wfs.by',
+                        dest: '/home/evasby/www/vizazh.wfs.by/layout',
+                        port: 21
+                    },
+                    files: [
+                        {
+                            expand: true,
+                            cwd: '.',
+                            src: [
+                                'dist/*'
+                            ]
+                        }
+                    ]
+                }
+			  },
         watch: {
             css: {
                 files: ['sass/*.scss'],
-                //tasks: ['sass', 'ftp_upload'],
-                tasks: ['sass'],
+                tasks: ['sass', 'ftp_push:css'],
                 options: {
                     spawn: false,
                 }
             },
-            /*scripts: {
-                files: ['js/*.js'],
-                tasks: ['concat', 'uglify'],
+            php: {
+                files: ['*.php'],
+                tasks: ['ftp_push:php'],
                 options: {
                     spawn: false,
                 }
-            }*/
+            },
+            js: {
+                files: ['js/*.js'],
+                tasks: ['ftp_push:js'],
+                options: {
+                    spawn: false,
+                }
+            }
         }
-
     });
-
-    // 3. Тут мы указываем Grunt, что хотим использовать этот плагин
-    //grunt.loadNpmTasks('grunt-contrib-concat');
-    //grunt.loadNpmTasks('grunt-contrib-uglify');
-    //grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-contrib-sass');
-    //grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-ftp-upload');
-
-    // 4. Указываем, какие задачи выполняются, когда мы вводим «grunt» в терминале
-    //grunt.registerTask('default', ['concat', 'uglify', 'imagemin', 'sass', 'watch']);
-    //grunt.registerTask('default', ['imagemin', 'sass', 'ftp_upload', 'watch']);
-    grunt.registerTask('default', ['sass', 'watch']);
-
+    grunt.loadNpmTasks('grunt-ftp-push');
+    grunt.registerTask('default', ['sass', 'ftp_push', 'watch']);
+    //grunt.registerTask('default', ['sass', 'watch']);
 };
