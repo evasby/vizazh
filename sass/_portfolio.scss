@@ -1,0 +1,38 @@
+.portfolio{
+	&_item{
+		padding: 15px 0px 0px 0px;
+	}
+	&_title{
+		font-family: arial;
+		font-size: 14px;
+		text-transform: uppercase;
+		color: #f35e7c;
+		margin: 0px 0px 15px 0px;
+	}
+	&_link{
+		@include link(#f35e7c, #f35e7c);
+		font-size: 18px;
+		font-family: arial;
+		text-decoration: none;
+		float: right;
+	}
+	&_bottom{
+		@include def-clearfix();
+		overflow: hidden;
+		a{
+			display: block;
+			float: left;
+			width: 284px;
+			height: 189px;
+			box-sizing: padding-box;
+			margin: 0px 20px 20px 0px;
+			&:nth-child(4n){
+				margin: 0px 0px 20px 0px;
+			}
+			img{
+				display: block;
+			}
+		}
+		
+	}
+}

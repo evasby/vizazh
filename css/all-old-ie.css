@@ -89,7 +89,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 html, body {
   height: 100%;
-  overflow: hidden;
 }
 
 body {
@@ -101,7 +100,6 @@ body {
   right: 0px;
   top: 0px;
   height: 100%;
-  overflow: hidden;
 }
 
 p {
@@ -554,6 +552,64 @@ textarea:focus {
 }
 .contacts_email a:focus {
   color: #636262;
+}
+
+.portfolio_item {
+  padding: 15px 0px 0px 0px;
+}
+.portfolio_title {
+  font-family: arial;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #f35e7c;
+  margin: 0px 0px 15px 0px;
+}
+.portfolio_link {
+  color: #f35e7c;
+  font-size: 18px;
+  font-family: arial;
+  text-decoration: none;
+  float: right;
+}
+.portfolio_link:visited {
+  color: #f35e7c;
+}
+.portfolio_link:hover {
+  color: #f35e7c;
+}
+.portfolio_link:active {
+  color: #f35e7c;
+}
+.portfolio_link:focus {
+  color: #f35e7c;
+}
+.portfolio_bottom {
+  display: inline-block;
+  overflow: hidden;
+}
+.portfolio_bottom:after {
+  content: " ";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+* html .portfolio_bottom {
+  height: 1px;
+}
+.portfolio_bottom a {
+  display: block;
+  float: left;
+  width: 284px;
+  height: 189px;
+  box-sizing: padding-box;
+  margin: 0px 20px 20px 0px;
+}
+.portfolio_bottom a:nth-child(4n) {
+  margin: 0px 0px 20px 0px;
+}
+.portfolio_bottom a img {
+  display: block;
 }
 
 /*# sourceMappingURL=all-old-ie.css.map */
