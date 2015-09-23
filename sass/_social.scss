@@ -1,5 +1,9 @@
 .social{
 	@include def-clearfix2();
+	@include respond(480){
+		text-align: center;
+		padding: 11px 0px 0px 0px;
+	}
 	&_title{
 		text-align: center;
 		margin: 0px 0px 10px 0px;
@@ -48,6 +52,14 @@
 			background-position: -85px 0px;
 			.social__contacts &{
 				background-position: -61px 0px;
+			}
+		}
+		@include respond(480){
+			float: none;
+			display: inline-block;
+			margin: 0px 0px 0px 15px;
+			&:first-child{
+				margin: 0px;
 			}
 		}
 	}

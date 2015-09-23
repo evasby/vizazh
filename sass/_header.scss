@@ -2,6 +2,9 @@
 	height: 96px;
 	overflow: hidden;
 	padding: 21px 0px 0px 0px;
+	@include respond(480){
+		height: 164px;
+	}
 	&__pa{
 		position:absolute;
 		left:0px;
@@ -24,9 +27,15 @@
 	}
 	&_left{
 		float: left;
+		@include respond(480){
+			float: none;
+		}
 	}
 	&_right{
 		float: right;
+		@include respond(480){
+			float: none;
+		}
 	}
 	&_center{
 

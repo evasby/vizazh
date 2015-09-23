@@ -14,6 +14,12 @@
 			display : inline;
 			zoom : 1;
 		}
+		@include respond(1024){
+			padding: 0px 10px 0px 10px;
+		}
+		@include respond(768){
+			padding: 0px 5px 0px 5px;
+		}
 	}
 	&_link{
 		@include link(#545454, #787878);
@@ -23,6 +29,9 @@
 		text-decoration: none;
 		&__active{
 			@include link(#787878, #787878);
+		}
+		@include respond(768){
+			font-size: 12px;
 		}
 	}
 }

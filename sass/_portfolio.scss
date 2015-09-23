@@ -29,6 +29,11 @@
 			&:nth-child(4n){
 				margin: 0px 0px 20px 0px;
 			}
+			@include respond(1200){
+				&:nth-child(4n){
+					margin: 0px 20px 20px 0px;
+				}
+			}
 			img{
 				display: block;
 			}

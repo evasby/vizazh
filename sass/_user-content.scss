@@ -1,0 +1,14 @@
+.user-content{
+	padding: 12px 0px 0px 0px;
+	img{
+		display: block;
+		max-width: 280px;
+		height: auto;
+		@include def-border-radius(5px);
+		margin: 0px auto 35px auto;
+	}
+	p{
+		line-height: 1.5;
+		margin: 0px 0px 24px 0px;
+	}
+}

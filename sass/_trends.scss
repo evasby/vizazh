@@ -1,0 +1,43 @@
+.trends{
+	@include def-clearfix();
+	padding: 15px 0px 0px 0px;
+	&_item{
+		float: left;
+		width: 600px;
+		@include def-clearfix();
+		position: relative;
+		margin: 0px 0px 40px 0px;
+	}
+	&_title{
+		font-family: corinthia;
+		font-size: 30px;
+		color: #f35e7c;
+		text-align: center;
+	}
+	&_image{
+		width: 204px;
+		height: 161px;
+		overflow: hidden;
+		@include def-border-radius(5px);
+		float: left;
+	}
+	&_text{
+		font-family: arial;
+		font-size: 12px;
+		color: #6d6d6d;
+		line-height: 1.6;
+		padding: 0px 20px 0px 214px;
+	}
+	&_link{
+		position: absolute;
+		bottom: -9px;
+		right: 25px;
+		font-family: corinthia;
+		font-size: 30px;
+		@include link(#f35e7c, #f35e7c);
+		text-decoration: none;
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+}

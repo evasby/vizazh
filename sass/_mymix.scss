@@ -29,6 +29,9 @@
     @if $media == 1280 {
       @media only screen and (max-width: 1279px) { @content; }
     }
+    @if $media == 1200 {
+      @media only screen and (max-width: 1199px) { @content; }
+    }
     @if $media == 1024 {
       @media only screen and (max-width: 1023px) { @content; }
     }

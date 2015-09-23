@@ -9,5 +9,8 @@
 		bottom: 78px;
 		overflow: auto;
 		z-index:1;
+		@include respond(480){
+			top: 185px;
+		}
 	}
 }
