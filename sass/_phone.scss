@@ -11,4 +11,8 @@
 			text-align: center;
 		}
 	}
+	a{
+		text-decoration: none;
+		@include link(#545454, #545454);
+	}
 }

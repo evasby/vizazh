@@ -495,6 +495,22 @@ textarea:focus {
   color: #545454;
   text-align: right;
 }
+.phone a {
+  text-decoration: none;
+  color: #545454;
+}
+.phone a:visited {
+  color: #545454;
+}
+.phone a:hover {
+  color: #545454;
+}
+.phone a:active {
+  color: #545454;
+}
+.phone a:focus {
+  color: #545454;
+}
 
 .footer {
   background-color: #ffffff;

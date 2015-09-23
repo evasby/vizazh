@@ -353,12 +353,22 @@ textarea:focus {
     float: none;
   }
 }
+@media only screen and (max-width: 1199px) {
+  .header_left {
+    padding: 0px 0px 0px 20px;
+  }
+}
 .header_right {
   float: right;
 }
 @media only screen and (max-width: 479px) {
   .header_right {
     float: none;
+  }
+}
+@media only screen and (max-width: 1199px) {
+  .header_right {
+    padding: 0px 20px 0px 0px;
   }
 }
 
@@ -541,6 +551,22 @@ textarea:focus {
   .phone p {
     text-align: center;
   }
+}
+.phone a {
+  text-decoration: none;
+  color: #545454;
+}
+.phone a:visited {
+  color: #545454;
+}
+.phone a:hover {
+  color: #545454;
+}
+.phone a:active {
+  color: #545454;
+}
+.phone a:focus {
+  color: #545454;
 }
 
 .footer {
